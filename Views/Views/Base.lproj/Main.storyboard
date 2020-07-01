@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,37 +12,41 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VIews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBI-Up-zGt">
-                                <rect key="frame" x="8" y="57.666666666666657" width="114" height="21"/>
+                                <rect key="frame" x="8" y="57.5" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-4c-vGF">
-                                <rect key="frame" x="273" y="52" width="94" height="32"/>
+                                <rect key="frame" x="312" y="52" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ffw-DX-hl5"/>
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIf-Pd-dwf">
-                                <rect key="frame" x="162" y="92" width="51" height="30"/>
+                                <rect key="frame" x="181.5" y="92" width="51" height="30"/>
                                 <state key="normal" title="Начать"/>
                                 <connections>
                                     <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7e-qv-f75"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK">
-                                <rect key="frame" x="8" y="130" width="359" height="611"/>
+                                <rect key="frame" x="8" y="130" width="398" height="695"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-r1-Bwj">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-r1-Bwj">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="emX-l5-plV"/>
                                             <constraint firstAttribute="height" constant="80" id="fzb-tS-7j3"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="0kL-YM-HYc" appends="YES" id="H7f-ch-Trx"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -52,7 +56,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCt-fP-ZZC">
-                                <rect key="frame" x="113" y="749" width="149" height="21"/>
+                                <rect key="frame" x="132.5" y="833" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,6 +84,7 @@
                         <outlet property="actionButton" destination="aIf-Pd-dwf" id="qsQ-fL-ei4"/>
                         <outlet property="gameFieldView" destination="od9-M9-mnK" id="ZWQ-oG-VMm"/>
                         <outlet property="gameObject" destination="JOe-r1-Bwj" id="hJU-Ot-c1K"/>
+                        <outlet property="scoreLabel" destination="XCt-fP-ZZC" id="mdc-iT-mPP"/>
                         <outlet property="shapeX" destination="TKJ-q1-QFC" id="bVs-HL-Rh3"/>
                         <outlet property="shapeY" destination="qzS-PD-NnC" id="Fkk-Yv-R0c"/>
                         <outlet property="stepper" destination="6dn-4c-vGF" id="b3L-Bj-PcG"/>
@@ -87,6 +92,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0kL-YM-HYc">
+                    <connections>
+                        <action selector="objectTapped:" destination="BYZ-38-t0r" id="rLO-Hn-rK5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="137.77173913043478"/>
         </scene>
