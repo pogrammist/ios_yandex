@@ -15,35 +15,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBI-Up-zGt">
-                                <rect key="frame" x="20" y="26" width="114" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBI-Up-zGt">
+                                <rect key="frame" x="8" y="13.666666666666664" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIf-Pd-dwf">
-                                <rect key="frame" x="182" y="48" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIf-Pd-dwf">
+                                <rect key="frame" x="181.66666666666666" y="48" width="51" height="30"/>
                                 <state key="normal" title="Начать"/>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-4c-vGF">
-                                <rect key="frame" x="300" y="20" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-4c-vGF">
+                                <rect key="frame" x="312" y="8" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ffw-DX-hl5"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCt-fP-ZZC">
-                                <rect key="frame" x="133" y="695" width="149" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK">
-                                <rect key="frame" x="20" y="86" width="374" height="601"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK">
+                                <rect key="frame" x="8" y="86" width="398" height="613"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-r1-Bwj">
                                         <rect key="frame" x="8" y="8" width="80" height="80"/>
@@ -52,8 +41,29 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCt-fP-ZZC">
+                                <rect key="frame" x="132.66666666666666" y="707" width="148.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="od9-M9-mnK" secondAttribute="trailing" constant="8" id="02S-Ue-DNw"/>
+                            <constraint firstItem="XCt-fP-ZZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ix-UQ-JMZ"/>
+                            <constraint firstItem="aIf-Pd-dwf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7A4-4H-0kr"/>
+                            <constraint firstItem="od9-M9-mnK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="7zY-je-0Ob"/>
+                            <constraint firstItem="CBI-Up-zGt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="AQf-OJ-oNc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dn-4c-vGF" secondAttribute="trailing" constant="8" id="E0v-sQ-tR2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XCt-fP-ZZC" secondAttribute="bottom" constant="8" id="EBY-1r-7xA"/>
+                            <constraint firstItem="CBI-Up-zGt" firstAttribute="centerY" secondItem="6dn-4c-vGF" secondAttribute="centerY" id="HPc-HN-te8"/>
+                            <constraint firstItem="XCt-fP-ZZC" firstAttribute="top" secondItem="od9-M9-mnK" secondAttribute="bottom" constant="8" id="Hpi-Yq-36y"/>
+                            <constraint firstItem="aIf-Pd-dwf" firstAttribute="top" secondItem="6dn-4c-vGF" secondAttribute="bottom" constant="8" id="PhF-9a-3hj"/>
+                            <constraint firstItem="od9-M9-mnK" firstAttribute="top" secondItem="aIf-Pd-dwf" secondAttribute="bottom" constant="8" id="VIt-bC-gtS"/>
+                            <constraint firstItem="6dn-4c-vGF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CBI-Up-zGt" secondAttribute="trailing" constant="8" symbolic="YES" id="gVh-vn-BRO"/>
+                            <constraint firstItem="6dn-4c-vGF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="oVF-zB-vp0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -63,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="138.58695652173915"/>
+            <point key="canvasLocation" x="136.23188405797103" y="137.77173913043478"/>
         </scene>
     </scenes>
     <resources>
