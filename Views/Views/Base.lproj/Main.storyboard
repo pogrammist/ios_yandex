@@ -21,16 +21,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIf-Pd-dwf">
-                                <rect key="frame" x="181.66666666666666" y="48" width="51" height="30"/>
-                                <state key="normal" title="Начать"/>
-                            </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-4c-vGF">
                                 <rect key="frame" x="312" y="8" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ffw-DX-hl5"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIf-Pd-dwf">
+                                <rect key="frame" x="181.66666666666666" y="48" width="51" height="30"/>
+                                <state key="normal" title="Начать"/>
+                                <connections>
+                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7e-qv-f75"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK">
                                 <rect key="frame" x="8" y="86" width="398" height="613"/>
                                 <subviews>
@@ -67,7 +70,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="actionButton" destination="aIf-Pd-dwf" id="qsQ-fL-ei4"/>
                         <outlet property="gameFieldView" destination="od9-M9-mnK" id="ZWQ-oG-VMm"/>
+                        <outlet property="stepper" destination="6dn-4c-vGF" id="b3L-Bj-PcG"/>
                         <outlet property="timeLabel" destination="CBI-Up-zGt" id="4yJ-VZ-7wA"/>
                     </connections>
                 </viewController>

@@ -40,7 +40,7 @@
 		CEF4152E24ACA727009F07F1 = {
 			isa = PBXGroup;
 			children = (
-				CEF4153924ACA727009F07F1 /* VIews */,
+				CEF4153924ACA727009F07F1 /* Views */,
 				CEF4153824ACA727009F07F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEF4153924ACA727009F07F1 /* VIews */ = {
+		CEF4153924ACA727009F07F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CEF4153A24ACA727009F07F1 /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				CEF4154524ACA728009F07F1 /* LaunchScreen.storyboard */,
 				CEF4154824ACA728009F07F1 /* Info.plist */,
 			);
-			path = VIews;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEF4153224ACA727009F07F1 /* Build configuration list for PBXProject "VIews" */;
+			buildConfigurationList = CEF4153224ACA727009F07F1 /* Build configuration list for PBXProject "Views" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEF4153224ACA727009F07F1 /* Build configuration list for PBXProject "VIews" */ = {
+		CEF4153224ACA727009F07F1 /* Build configuration list for PBXProject "Views" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEF4154924ACA728009F07F1 /* Debug */,
