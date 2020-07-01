@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     private var isGameActive = false
     private var gameTimeLeft: TimeInterval = 0
+    private var gameTimer: Timer?
+    private var timer: Timer?
+    private var displayDuration: TimeInterval = 1
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var gameFieldView: UIView!
@@ -38,6 +41,21 @@ class ViewController: UIViewController {
     }
     
     private func startGame() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: displayDuration,
+                                         target: self,
+                                         selector: #selector(moveImage),
+                                         userInfo: nil,
+                                         repeats: true
+        )
+        timer?.fire()
+        gameTimer?.invalidate()
+        gameTimer = Timer.scheduledTimer(timeInterval: 1,
+                                         target: self,
+                                         selector: #selector(ganeTimeTick),
+                                         userInfo: nil,
+                                         repeats: true
+        )
         gameTimeLeft = stepper.value
         isGameActive = true
         updateUI()
@@ -46,6 +64,8 @@ class ViewController: UIViewController {
     private func stopGame() {
         isGameActive = false
         updateUI()
+        gameTimer?.invalidate()
+        timer?.invalidate()
     }
     
     private func updateUI() {
@@ -57,6 +77,19 @@ class ViewController: UIViewController {
             timeLabel.text = "Время \(Int(stepper.value)) сек"
             actionButton.setTitle("Начать", for: .normal)
         }
+    }
+    
+    @objc private func ganeTimeTick() {
+        gameTimeLeft -= 1
+        if gameTimeLeft <= 0 {
+            stopGame()
+        } else {
+            updateUI()
+        }
+    }
+    
+    @objc private func moveImage() {
+        print("move")
     }
 }
 
