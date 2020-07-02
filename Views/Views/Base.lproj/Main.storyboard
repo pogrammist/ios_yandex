@@ -85,8 +85,8 @@
                         <outlet property="gameFieldView" destination="od9-M9-mnK" id="ZWQ-oG-VMm"/>
                         <outlet property="gameObject" destination="JOe-r1-Bwj" id="hJU-Ot-c1K"/>
                         <outlet property="scoreLabel" destination="XCt-fP-ZZC" id="mdc-iT-mPP"/>
-                        <outlet property="shapeX" destination="TKJ-q1-QFC" id="bVs-HL-Rh3"/>
-                        <outlet property="shapeY" destination="qzS-PD-NnC" id="Fkk-Yv-R0c"/>
+                        <outlet property="shapeX" destination="qzS-PD-NnC" id="7uQ-LQ-vMP"/>
+                        <outlet property="shapeY" destination="TKJ-q1-QFC" id="Syk-OT-c3z"/>
                         <outlet property="stepper" destination="6dn-4c-vGF" id="b3L-Bj-PcG"/>
                         <outlet property="timeLabel" destination="CBI-Up-zGt" id="4yJ-VZ-7wA"/>
                     </connections>
