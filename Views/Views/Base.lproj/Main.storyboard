@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK" customClass="GameFieldView" customModule="VIews" customModuleProvider="target">
-                                <rect key="frame" x="8" y="130" width="398" height="695"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK" customClass="GameFieldView" customModule="VIews" customModuleProvider="target">
+                                <rect key="frame" x="8" y="122" width="398" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shapeSize">
@@ -30,26 +30,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iaZ-JJ-VaE" customClass="GameControlViewClass" customModule="VIews" customModuleProvider="target">
-                                <rect key="frame" x="16" y="44" width="382" height="78"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaZ-JJ-VaE" customClass="GameControlViewClass" customModule="VIews" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="70"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="od9-M9-mnK" secondAttribute="trailing" constant="8" id="02S-Ue-DNw"/>
-                            <constraint firstItem="od9-M9-mnK" firstAttribute="top" secondItem="iaZ-JJ-VaE" secondAttribute="bottom" constant="8" id="0vu-jH-orK"/>
                             <constraint firstItem="XCt-fP-ZZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ix-UQ-JMZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iaZ-JJ-VaE" secondAttribute="trailing" constant="16" id="4vm-dd-a3N"/>
+                            <constraint firstItem="iaZ-JJ-VaE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4EJ-3N-hfV"/>
                             <constraint firstItem="od9-M9-mnK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="7zY-je-0Ob"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XCt-fP-ZZC" secondAttribute="bottom" constant="8" id="EBY-1r-7xA"/>
-                            <constraint firstItem="iaZ-JJ-VaE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HNF-KX-g3I"/>
                             <constraint firstItem="XCt-fP-ZZC" firstAttribute="top" secondItem="od9-M9-mnK" secondAttribute="bottom" constant="8" id="Hpi-Yq-36y"/>
-                            <constraint firstItem="iaZ-JJ-VaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lI5-tZ-hYB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iaZ-JJ-VaE" secondAttribute="trailing" constant="16" id="K2P-AF-oDW"/>
+                            <constraint firstItem="iaZ-JJ-VaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O4a-xy-TKU"/>
+                            <constraint firstItem="od9-M9-mnK" firstAttribute="top" secondItem="iaZ-JJ-VaE" secondAttribute="bottom" constant="8" id="lQj-IR-1o5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="gameControl" destination="iaZ-JJ-VaE" id="zSK-cj-drz"/>
                         <outlet property="gameFieldView" destination="od9-M9-mnK" id="ZWQ-oG-VMm"/>
                         <outlet property="scoreLabel" destination="XCt-fP-ZZC" id="mdc-iT-mPP"/>
                     </connections>

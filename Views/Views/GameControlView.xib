@@ -7,7 +7,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameControlViewClass" customModule="VIews" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameControlViewClass" customModule="VIews" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="L2P-LI-GEJ" id="VkF-7Q-obw"/>
+                <outlet property="stepper" destination="zZ3-Tf-gvi" id="Jf1-Sc-Fhf"/>
+                <outlet property="timeLabel" destination="jbo-71-q2M" id="Swl-9H-vFj"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="434" height="127"/>
@@ -22,9 +28,15 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2P-LI-GEJ">
                     <rect key="frame" x="191.5" y="40" width="51" height="53"/>
                     <state key="normal" title="Начать"/>
+                    <connections>
+                        <action selector="actionButtonTapped:" destination="-1" eventType="touchUpInside" id="Ve7-tN-Ee1"/>
+                    </connections>
                 </button>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="zZ3-Tf-gvi">
                     <rect key="frame" x="340" y="0.0" width="94" height="32"/>
+                    <connections>
+                        <action selector="stepperChanged:" destination="-1" eventType="valueChanged" id="pIW-zZ-wDc"/>
+                    </connections>
                 </stepper>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
