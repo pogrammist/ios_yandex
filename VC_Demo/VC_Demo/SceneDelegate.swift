@@ -20,9 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        let tabBarController = UITabBarController()
+        let rateViewController = RateViewController()
+        rateViewController.tabBarItem = UITabBarItem(title: "Rate", image: UIImage(named: "star48"), selectedImage: nil)
         let startViewController = StartViewController()
         let navigationController = UINavigationController(rootViewController: startViewController)
-        window?.rootViewController = navigationController
+        navigationController.tabBarItem = UITabBarItem(title: "First Screen", image: UIImage(named: "star40"), selectedImage: nil)
+        tabBarController.viewControllers = [navigationController, rateViewController]
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 

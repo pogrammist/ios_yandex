@@ -30,12 +30,21 @@
                         <action selector="buttonCloseClicked:" destination="-1" eventType="touchUpInside" id="aSF-YO-9eU"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYJ-pZ-mK3">
+                    <rect key="frame" x="170.5" y="483" width="73" height="30"/>
+                    <state key="normal" title="Show Rate"/>
+                    <connections>
+                        <action selector="showRateTab:" destination="-1" eventType="touchUpInside" id="q3l-dm-C2m"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="PCQ-hs-82J" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4FH-IP-RY6"/>
                 <constraint firstItem="rWw-ha-AQE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NuF-OF-RXH"/>
+                <constraint firstItem="pYJ-pZ-mK3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qaz-fq-Xk8"/>
                 <constraint firstItem="PCQ-hs-82J" firstAttribute="top" secondItem="rWw-ha-AQE" secondAttribute="bottom" constant="20" id="Z9B-jA-52e"/>
+                <constraint firstItem="pYJ-pZ-mK3" firstAttribute="top" secondItem="PCQ-hs-82J" secondAttribute="bottom" constant="20" id="iv3-yJ-Pf5"/>
                 <constraint firstItem="PCQ-hs-82J" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ndk-BC-ipN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
