@@ -24,10 +24,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-hs-82J">
-                    <rect key="frame" x="190" y="433" width="34" height="30"/>
-                    <state key="normal" title="Back"/>
+                    <rect key="frame" x="187.5" y="433" width="39" height="30"/>
+                    <state key="normal" title="Close"/>
                     <connections>
-                        <action selector="buttonCloseClocked:" destination="-1" eventType="touchUpInside" id="9ao-2O-x1n"/>
+                        <action selector="buttonCloseClicked:" destination="-1" eventType="touchUpInside" id="aSF-YO-9eU"/>
                     </connections>
                 </button>
             </subviews>

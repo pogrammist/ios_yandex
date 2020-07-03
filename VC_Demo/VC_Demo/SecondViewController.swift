@@ -13,9 +13,9 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Second"
     }
-    @IBAction func buttonCloseClocked(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func buttonCloseClicked(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }
