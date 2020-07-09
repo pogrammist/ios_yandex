@@ -15,45 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBI-Up-zGt">
-                                <rect key="frame" x="8" y="57.5" width="114" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-4c-vGF">
-                                <rect key="frame" x="312" y="52" width="94" height="32"/>
-                                <connections>
-                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ffw-DX-hl5"/>
-                                </connections>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIf-Pd-dwf">
-                                <rect key="frame" x="181.5" y="92" width="51" height="30"/>
-                                <state key="normal" title="Начать"/>
-                                <connections>
-                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7e-qv-f75"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK">
-                                <rect key="frame" x="8" y="130" width="398" height="695"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-r1-Bwj">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="emX-l5-plV"/>
-                                            <constraint firstAttribute="height" constant="80" id="fzb-tS-7j3"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="0kL-YM-HYc" appends="YES" id="H7f-ch-Trx"/>
-                                        </connections>
-                                    </imageView>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-M9-mnK" customClass="GameFieldView" customModule="VIews" customModuleProvider="target">
+                                <rect key="frame" x="8" y="122" width="398" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="JOe-r1-Bwj" firstAttribute="top" secondItem="od9-M9-mnK" secondAttribute="top" id="TKJ-q1-QFC"/>
-                                    <constraint firstItem="JOe-r1-Bwj" firstAttribute="leading" secondItem="od9-M9-mnK" secondAttribute="leading" id="qzS-PD-NnC"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shapeSize">
+                                        <size key="value" width="80" height="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCt-fP-ZZC">
                                 <rect key="frame" x="132.5" y="833" width="149" height="21"/>
@@ -61,34 +30,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaZ-JJ-VaE" customClass="GameControlViewClass" customModule="VIews" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="od9-M9-mnK" secondAttribute="trailing" constant="8" id="02S-Ue-DNw"/>
                             <constraint firstItem="XCt-fP-ZZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ix-UQ-JMZ"/>
-                            <constraint firstItem="aIf-Pd-dwf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7A4-4H-0kr"/>
+                            <constraint firstItem="iaZ-JJ-VaE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4EJ-3N-hfV"/>
                             <constraint firstItem="od9-M9-mnK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="7zY-je-0Ob"/>
-                            <constraint firstItem="CBI-Up-zGt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="AQf-OJ-oNc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dn-4c-vGF" secondAttribute="trailing" constant="8" id="E0v-sQ-tR2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XCt-fP-ZZC" secondAttribute="bottom" constant="8" id="EBY-1r-7xA"/>
-                            <constraint firstItem="CBI-Up-zGt" firstAttribute="centerY" secondItem="6dn-4c-vGF" secondAttribute="centerY" id="HPc-HN-te8"/>
                             <constraint firstItem="XCt-fP-ZZC" firstAttribute="top" secondItem="od9-M9-mnK" secondAttribute="bottom" constant="8" id="Hpi-Yq-36y"/>
-                            <constraint firstItem="aIf-Pd-dwf" firstAttribute="top" secondItem="6dn-4c-vGF" secondAttribute="bottom" constant="8" id="PhF-9a-3hj"/>
-                            <constraint firstItem="od9-M9-mnK" firstAttribute="top" secondItem="aIf-Pd-dwf" secondAttribute="bottom" constant="8" id="VIt-bC-gtS"/>
-                            <constraint firstItem="6dn-4c-vGF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CBI-Up-zGt" secondAttribute="trailing" constant="8" symbolic="YES" id="gVh-vn-BRO"/>
-                            <constraint firstItem="6dn-4c-vGF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="oVF-zB-vp0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iaZ-JJ-VaE" secondAttribute="trailing" constant="16" id="K2P-AF-oDW"/>
+                            <constraint firstItem="iaZ-JJ-VaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O4a-xy-TKU"/>
+                            <constraint firstItem="od9-M9-mnK" firstAttribute="top" secondItem="iaZ-JJ-VaE" secondAttribute="bottom" constant="8" id="lQj-IR-1o5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="aIf-Pd-dwf" id="qsQ-fL-ei4"/>
+                        <outlet property="gameControl" destination="iaZ-JJ-VaE" id="zSK-cj-drz"/>
                         <outlet property="gameFieldView" destination="od9-M9-mnK" id="ZWQ-oG-VMm"/>
-                        <outlet property="gameObject" destination="JOe-r1-Bwj" id="hJU-Ot-c1K"/>
                         <outlet property="scoreLabel" destination="XCt-fP-ZZC" id="mdc-iT-mPP"/>
-                        <outlet property="shapeX" destination="qzS-PD-NnC" id="7uQ-LQ-vMP"/>
-                        <outlet property="shapeY" destination="TKJ-q1-QFC" id="Syk-OT-c3z"/>
-                        <outlet property="stepper" destination="6dn-4c-vGF" id="b3L-Bj-PcG"/>
-                        <outlet property="timeLabel" destination="CBI-Up-zGt" id="4yJ-VZ-7wA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,10 +62,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="137.77173913043478"/>
+            <point key="canvasLocation" x="136.23188405797103" y="137.27678571428569"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Triangle" width="1152" height="1024"/>
-    </resources>
 </document>
