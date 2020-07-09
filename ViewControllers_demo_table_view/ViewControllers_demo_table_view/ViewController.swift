@@ -10,10 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     var categories = RecipeCategory.allRecipes
+    let reuseIdentifier = "recipe cell"
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
     }
 
 
@@ -29,12 +33,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let cell = tableView.dequeueReusableCell(withIdentifier:
+            reuseIdentifier, for: indexPath) as! RecipeTableViewCell
         let recipe = categories[indexPath.section].recipes[indexPath.row]
-        cell.textLabel?.text = recipe.title
-        cell.textLabel?.numberOfLines = 0
-        cell.detailTextLabel?.text = recipe.ingresients
-        cell.detailTextLabel?.numberOfLines = 0
+        cell.recipeTitleLabel.text = recipe.title
+        cell.recipeIngredientsLabel.text = recipe.ingresients
+        cell.iconImageView.image = recipe.photo
         return cell
     }
     
